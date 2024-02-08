@@ -11,8 +11,7 @@
         "build": "parcel build"
     },
     "dependencies": {
-        "@exodus/bitcoin-wallet-standard-features": "workspace:^",
-        "@exodus/bitcoin-wallet-standard-sats-connect": "workspace:^",
+        "@exodus/bitcoin-wallet-standard-features": "^0.0.1",
         "@scure/base": "^1.1.1",
         "@scure/btc-signer": "^1.2.1",
         "@wallet-standard/react": "^0.1.4",
