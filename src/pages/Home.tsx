@@ -29,7 +29,6 @@ const Connected: FC = () => {
 
     // Sign a dummy message with the connected wallet
     async function signWalletMessage() {
-        console.log(nativeSegwitAddress);
         try {
             await signMessage({
                 payload: {
