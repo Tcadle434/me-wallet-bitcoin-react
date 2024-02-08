@@ -6,7 +6,6 @@ import { Link, Navigate } from 'react-router-dom';
 import { ConnectionStatusContext } from '../context/ConnectionStatus';
 import type { FC } from 'react';
 import type { Wallet, WalletWithFeatures } from '@wallet-standard/base';
-import type { SatsConnectFeature } from '@exodus/bitcoin-wallet-standard-sats-connect';
 import type { Account } from '../types';
 
 const SatsConnectNamespace = 'sats-connect:';
@@ -24,8 +23,7 @@ export const Connect: FC = () => {
         try {
             await getAddress({
                 getProvider: async () =>
-                    (wallet as unknown as WalletWithFeatures<SatsConnectFeature>).features[SatsConnectNamespace]
-                        ?.provider,
+                    (wallet as unknown as WalletWithFeatures<any>).features[SatsConnectNamespace]?.provider,
                 payload: {
                     purposes: [AddressPurpose.Ordinals, AddressPurpose.Payment],
                     message: 'Address for receiving Ordinals and payments',
